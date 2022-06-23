@@ -1,0 +1,19 @@
+{
+  "nivel": [
+    "Bachillerato",
+	"Licenciatura"
+  ], 
+  "area": [
+    "Matemáticas", 
+    "Física",
+	"Cálculo vectorial",
+	"Campos vectoriales",
+	"Vectores",
+	"Rotacional",
+	"Divergencia"
+  ], 
+  "titulo": "Campos vectoriales", 
+  "descripcion": "Unidad introductoria a los campos vectoriales y las herramientas usadas en su estudio, tales como el rotacional y la divergencia. Se plantean dichas herramientas considerando elementos de volumen finitos (un disco que gira para el rotacional y una caja en la que entra o sale flujo para la divergencia). Con ello se pretende que el alumno tenga una noción física de cómo funcionan dichas herramientas y su asociación con la fórmula para rotacional y divergencia cuando dichos elementos de volumen se hacen infinitesimales. Finalmente se concluye con un resumen de lo aprendido y la relación formal con la definición de rotacional y divergencia en tres dimensiones.",
+  "resena": "Introducción a los campos vectoriales y sus herramientas de estudio.",
+  "id": "01_CamposVectoriales"
+}

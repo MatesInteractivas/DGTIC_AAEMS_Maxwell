@@ -1,0 +1,20 @@
+{
+  "nivel": [
+    "Bachillerato",
+	"Licenciatura"
+  ], 
+  "area": [
+    "Matemáticas", 
+    "Física",
+	"Cálculo vectorial",
+	"Campos vectoriales",
+	"Vectores",
+	"Ley de Faraday",
+	"3a ley de Maxwell",
+	"Electromagnetismo"
+  ], 
+  "titulo": "La 3a Ley de Maxwell", 
+  "descripcion": "Unidad introductoria a la tercera ecuación del electromagnetismo de Maxwell. Inicialmente se muestra el efecto experimental de producir un campo eléctrico al pasar una corriente por un cable para plantear la pregunta de si es posible hacer lo inverso. Para ello, se plantean experimentos en que un imán de barra se hace pasar a distintas velocidades por una espira de alambre a la cual se le mide la corriente. Otro experimento incluye una espira rotatoria (con una o varias vueltas) que gira cortando alternadamente un campo magnético fijo, y se busca una relación entre el número de espiras, la superficie expuesta al campo y la velocidad de giro de la espira. También se muestra experimentalmente el efecto de una corriente inducida por una espira con corriente sobre una segunda espira secundaria. Se concluye con un documento en el que se plantea lo observado en la forma de la 3a ecuación de Maxwell.",
+  "resena": "Introducción a la tercera ley de Maxwell.",
+  "id": "03_3aEcMaxwell"
+}

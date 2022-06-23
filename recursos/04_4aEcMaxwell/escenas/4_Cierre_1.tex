@@ -1,0 +1,79 @@
+\documentclass{article}
+\usepackage[letterpaper,margin=2cm]{geometry}
+\usepackage[spanish]{babel}
+\decimalpoint
+\usepackage[utf8]{inputenc}
+\usepackage{fourier}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage[makeroom]{cancel}
+\usepackage{esvect}
+\usepackage{gensymb}
+\usepackage{color,soul}
+\usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{afterpage}
+\usepackage{lipsum}
+\usepackage[hypcap]{caption}
+\usepackage{subcaption}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage{soulutf8}
+\usepackage{hyperref}
+\usepackage{avant}
+\usepackage{tikz}
+\usepackage{eso-pic}
+\usepackage{multicol}
+\usepackage{etoolbox,fancyhdr}
+\usepackage[explicit]{titlesec} %Para modificar los encabezados
+\usepackage{tikz}
+\usetikzlibrary{arrows,shapes,positioning}
+\usepackage{physics}
+
+\begin{document}
+
+%\author{Author's Name}
+\title{La 4a ecuación de Maxwell}
+\date{}
+\maketitle
+
+%\begin{abstract}
+%The abstract text goes here.
+%\end{abstract}
+
+%\section{Introduction}
+%Here is the text of your introduction.
+
+La ley de Ampère, dada por $B_{aro}=\mu_0I$, funciona correctamente cuando se tiene una corriente eléctrica fluyendo por un cable. En dicha fórmula, $B_{aro}$ es el campo magnético que se enreda alrededor de un aro a través del cual pasa la corriente eléctrica, $\mu_0$ es una constante experimental llamada la permeabilidad magnética del vacío e $I$ es la corriente que pasa por el cable. La dirección del campo magnético (hacia donde giran las flechas en el aro) depende de la dirección de la corriente. Y la magnitud del campo magnético depende de qué tan intensa está la corriente y de qué tan lejos está el sitio de medición del cable por el que pasa la corriente.\bigskip
+
+Debido a la naturaleza del fenómeno, esta fórmula es válida no sólo para aros circulares, sino para cualquier curva siempre y cuando se cierre. Adicionalmente, la fórmula es válida considerando que el aro subtiende una membrana que se puede deformar y ser tocada por diversas partes del cable.\bigskip
+
+No obstante, a Ampère no se le ocurrió que podía tener un elemento en su circuito por el cual no pasaba corriente, aunque en el resto del circuito sí pasaba corriente. Dicho elemento es el \emph{capacitor} o \emph{condensador}, que usualmente consiste en un par de placas en donde se acumula un exceso de cargas negativas (electrones) de un lado mientras que el otro lado es evacuado de electrones, dejando una carga neta positiva. Esto causa que, en donde se acumulan los electrones habrá un exceso de carga negativa y del otro lado habrá un exceso de carga positiva. Y mientras más fluyen los electrones, más se acumularán de un lado del capacitor y menos quedarán del otro.\bigskip
+
+Maxwell notó que si la susodicha membrana se deformaba tal que quedara dentro del capacitor, no fluiría corriente a través de ella ($I$ sería 0) y, por lo tanto, $B_{aro}$ tendría que ser 0 también. Pero ello era inconsistente pues si la corriente de electrones tocaba la membrana se tendría un resultado, y si no, se tendría otro, cuando debería de obtenerse siempre el mismo resultado. Lo único que pasaba a través de la membrana cuando ella estaba dentro del capacitor era el campo eléctrico, así que Maxwell supuso que alguna corrección que involucraba el campo eléctrico faltaba en la fórmula de Ampère para hacerla consistente.\bigskip
+
+Así pues, se basó en los hallazgos de Faraday: si se tiene un aro dentro del cual cambia el campo magnético respecto al tiempo, alrededor del aro se inducirá un campo eléctrico. ¿No sería que si dentro de un aro se hace cambiar un campo eléctrico, se formaría un campo magnético alrededor del aro? Echando mano de la entonces conocida ley de Gauss para cargas eléctricas (también conocida como la primera ecuación de Maxwell), notó que el campo eléctrico que fluía a través de una membrana es sólo proporcional a la carga dentro de la superficie. Pero si la carga aumenta o disminuye (como en el capacitor que constantemente se están inyectando electrones), entonces el campo eléctrico está cambiando también.\bigskip
+
+Maxwell corrigió la ley de Ampère agregando un término para esta contribución, mismo que bautizó \emph{corriente de desplazamiento}. Este término ahora tomaba en cuenta lo que esperaba, que un cambio instantáneo del campo eléctrico también induce un campo magnético alrededor de un aro a través del cual el campo eléctrico pasa. La fórmula completa de la 4a ecuación de Maxwell es, como se anotó en la presente unidad, $B_{aro}=\mu_0(I+\epsilon_0Cambio_E)$, donde $Cambio_E$ es el cambio instantáneo en el campo eléctrico dentro del aro alrededor del cual se forma el campo magnético. Notamos que, si no hay un cambio en el campo eléctrico, se recupera la ley de Ampère.\bigskip
+
+Realmente, la 4a ecuación de Maxwell se escribe así:\bigskip
+
+\begin{equation}
+\begin{aligned}
+\vv{B}=\mu_0\Bigg(I+\epsilon_0\frac{d}{dt}\vv{E}\Bigg)\\
+\oint\vv{B}\cdot{d}\vv{s}=\mu_0I+\epsilon_0\mu_0\frac{d}{dt}\Phi_E
+\end{aligned}
+\end{equation}\bigskip
+
+La primera ecuación de (1) es la forma diferencial de la 4a ecuación de Maxwell. El segundo término dentro del paréntesis a la derecha de la igualdad está relacionado con la corriente de desplazamiento, y corresponde a la derivada temporal del campo eléctrico. Si la membrana es cortada por el cable, sólo sobrevive el primer término dentro del paréntesis, y se recupera la ley de Ampère. Pero si la membrana queda dentro del capacitor, el primer término en el paréntesis no figura (pues no hay corriente pasando por la membrana), pero el segundo término sí aparece pues en dicha situación sí hay cambio del campo eléctrico al aumentar la polarización de carga entre ambos lados del condensador.\bigskip
+
+La segunda ecuación de (1) es la forma integral de la 4a ecuación de Maxwell. El lado izquierdo de la igualdad es la integral del campo magnético alrededor de la curva que contiene a la membrana imaginaria. Es la suma (integral) de la componente (de ahí el producto punto) del campo magnético sobre la curva cerrada. El lado derecho vuelve a presentar un primer término que corresponde al existente ya en la ley de Ampère, mientras que el segundo es el término de corrección de Maxwell relacionado con la corriente de desplazamiento. Sólo que en esta versión, se toma la derivada temporal del flujo eléctrico (cuánto campo atraviesa la superficie).\bigskip
+
+Dicho magnífico descubrimiento lo llevó a confirmar algo que ya suponía. Que un campo eléctrico cambiante (sin necesidad de un cable por el que fluye una corriente) genera un campo magnético en su vecindad. Pero, como bien nos indica la ley de Faraday, éste campo magnético cambia si el campo eléctrico que lo genera constantemente cambia de signo, y un campo magnético cambiante genera a su vez un campo eléctrico. Así pues, el producir un campo eléctrico que constantemente cambia de signo producirá un campo magnético que también cambia de signo, que a su vez produce otro campo eléctrico más adelante y así sucesivamente. El comportamiento es el de una onda. Y como los campos magnéticos y eléctricos pueden propagarse en el vacío, esta onda podría propagarse en el vacío.\bigskip
+
+¿Se te ocurre de qué estamos hablando? En efecto, es un campo electromagnético, del cual la luz es una manifestación. De hecho, la deducción de la velocidad de la onda fue obtenida por Maxwell también. Y dicha velocidad coincidió muy bien con la velocidad de la luz medida experimentalmente antes. Posteriormente, un experimento por Heinrich Hertz confirmó toda esta teoría. Todo esto vino a tirar siglos de elucubraciones sobre la naturaleza de la luz, ¡y todo gracias a el introducir un capacitor en un experimento previamente conocido!\bigskip
+
+Se sugiere revisar ahora sí el video completo en la \emph{Motivación} de la presente unidad, en el que podrás repasar los conceptos de las cuatro Leyes de Maxwell, así como ganar una noción de cómo demostró que la luz es una onda electromagnética.
+
+\end{document}

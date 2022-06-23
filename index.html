@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>DGTIC_AAEMS_Maxwell</title>
+
+		<!-- CSS -->
+
+		<style type="text/css">
+
+			html, body {
+				width: 100%;
+				height: 100%;
+				margin: 0;
+				border: 0;
+				padding: 0;
+				background-color: #FFF;
+				color: #333;
+				font-family: Arial, Helvetica, sans-serif;
+				font-size: 16px;
+			}
+
+			a {
+				outline:none;
+			}
+
+			img {
+				outline:none;
+				display:block;
+			}
+
+			h1 {
+				font-size: 18px;
+				font-weight: bold;
+				text-align: center;
+			}
+
+			.table {
+				width: 100%;
+				border-collapse:separate;
+				border-spacing: 0 40px;
+			}
+
+			.table_td_image {
+				width: 50%;
+			}
+
+			.table_td_info {
+				width: 50%;
+				padding-left: 20px;
+			}
+
+			.image_thumbnails {
+				width: 415px;
+				height: 257px;
+			}
+
+			a.info_title:link {
+				font-size: 16px;
+				font-weight: bold;
+				color: #333;
+			}
+
+			a.info_id:link {
+				font-size: 14px;
+				color: #333;
+				text-decoration:none;
+			}
+
+			a.info_download:link {
+				font-size: 14px;
+				color: #207FBA;
+			}
+
+			.text_footer{
+				font-size: 11px;
+			}
+
+			#image_cc {
+				float: left;
+				margin-right: 6px;
+			}
+
+			#container {
+				position: absolute;
+				width: 900px;
+				left: 50%;
+				margin-left: -450px;
+				background-color: #FFF;
+				box-shadow: 0 0 25px #BFBFBF;
+			}
+
+			#page {
+				width: 830px;
+				margin-left: 35px;
+			}
+
+		</style>
+
+
+		<script>
+
+			function doIndex(){
+
+				// AQUI ES DONDE SE DEFINEN LOS ITEMS
+
+				var items = [
+					{
+						folder: 'recursos/01_CamposVectoriales',
+						id: '01_CamposVectoriales',
+						title: 'Campos vectoriales',
+						info: 'Unidad introductoria a los campos vectoriales y las herramientas usadas en su estudio, tales como el rotacional y la divergencia. Se plantean dichas herramientas considerando elementos de volumen finitos (un disco que gira para el rotacional y una caja en la que entra o sale flujo para la divergencia). Con ello se pretende que el alumno tenga una noción física de cómo funcionan dichas herramientas y su asociación con la fórmula para rotacional y divergencia cuando dichos elementos de volumen se hacen infinitesimales. Finalmente se concluye con un resumen de lo aprendido y la relación formal con la definición de rotacional y divergencia en tres dimensiones.',
+						zip: 'ZIPS/01_CamposVectoriales.zip'
+					},
+					{
+						folder: 'recursos/02_1a2aEcMaxwell',
+						id: '02_1a2aEcMaxwell',
+						title: '1a y 2a leyes de Maxwell',
+						info: 'Unidad introductoria a la primera y segunda ecuaciones del electromagnetismo de Maxwell. Inicialmente se presenta el flujo como el cruce de líneas de campo por una cara dada. Posteriormente se consideran superficies cerradas compuestas por caras, y se observa el flujo a través de dichas superficies. De donde se deduce que el flujo eléctrico a través de una superficie cerrada siempre es igual (y proporcional a la carga que encierra), independiente de la forma de la superficie o su posición (ley de Gauss o 1a ley de Maxwell). Se muestran aplicaciones de la misma para el cálculo de campos eléctricos. Finalmente se hace un ejercicio similar para el caso de los magnetos, de donde se deduce que, como las curvas de campo en un magneto siempre son cerradas, el flujo magnético a través de una superficie cerrada siempre es cero.',
+						zip: 'ZIPS/02_1a2aEcMaxwell.zip'
+					},
+					{
+						folder: 'recursos/03_3aEcMaxwell',
+						id: '03_3aEcMaxwell',
+						title: 'La 3a Ley de Maxwell',
+						info: 'Unidad introductoria a la tercera ecuación del electromagnetismo de Maxwell. Inicialmente se muestra el efecto experimental de producir un campo eléctrico al pasar una corriente por un cable para plantear la pregunta de si es posible hacer lo inverso. Para ello, se plantean experimentos en que un imán de barra se hace pasar a distintas velocidades por una espira de alambre a la cual se le mide la corriente. Otro experimento incluye una espira rotatoria (con una o varias vueltas) que gira cortando alternadamente un campo magnético fijo, y se busca una relación entre el número de espiras, la superficie expuesta al campo y la velocidad de giro de la espira. También se muestra experimentalmente el efecto de una corriente inducida por una espira con corriente sobre una segunda espira secundaria. Se concluye con un documento en el que se plantea lo observado en la forma de la 3a ecuación de Maxwell.',
+						zip: 'ZIPS/03_3aEcMaxwell.zip'
+					},
+					{
+						folder: 'recursos/04_4aEcMaxwell',
+						id: '04_4aEcMaxwell',
+						title: 'La 4a Ley de Maxwell',
+						info: 'Unidad introductoria a la cuarta ecuación del electromagnetismo de Maxwell. Incluye un video motivacional sobre el problema que Maxwell se dispuso a resolver y con el que encontró la corrección a la ecuación de Ampère. Se presenta luego la ley de Biot-Savart y la ley de Ampère mediante la integración para constituir un alambre completo. Se muestra posteriormente la situación para la cual la ley de Ampère resulta incompleta (el caso del capacitor). Finalmente se muestra la corrección que Maxwell hizo a dicha ley para obtener su cuarta ecuación.',
+						zip: 'ZIPS/04_4aEcMaxwell.zip'
+					}// EL ULTIMO ITEM NO LLEVA COMA "," AL FINAL
+				];
+
+				var table = [];
+				table.push('<table class="table">');
+				for(var i = 0, cnt = items.length; i < cnt; i++){
+					var itm = items[i];
+					var row = '\
+					<tr>\
+						<td class="table_td_image">\
+							<a href="' + itm.folder + '/index.html">\
+								<img class="image_thumbnails" src="' + itm.folder + '/meta/icono.png" alt="Imagen">\
+							</a>\
+						</td>\
+						<td class="table_td_info">\
+							<a class="info_title" href="' + itm.folder + '/index.html">' + itm.title + '</a>\
+							<br><br>' + itm.info + '<br><br>\
+							<a class="info_id" href="' + itm.folder + '/index.html">(' + itm.id + ')</a>\
+							<br><br>\
+							<a class="info_download" href="' + itm.zip + '">Descargar unidad interactiva (.zip)</a>\
+						</td>\
+					</tr>'
+					table.push(row);
+				}
+				table.push('</table>');
+				return table.join('');
+			}
+
+		</script>
+
+	</head>
+
+
+	<body>
+
+		<div id="container">
+
+			<div id="page">
+
+				<!-- IMAGE & SEPARATOR HEADER-->
+				<img src="images/index_header.png" alt="Logotipos">
+				<img src="images/index_bar.png" alt="Separador">
+
+				<!-- VERTICAL SPACE -->
+				<div style="height:30px;"></div>
+
+				<!-- TITLE -->
+				<h1>Las ecuaciones de Maxwell</h1>
+
+				<!-- DINAMIC TABLE CREATION -->
+				<script> document.write(doIndex());</script>
+
+				<!-- FOOTER -->
+
+				<!-- SEPARATOR -->
+				<img src="images/index_bar.png" alt="Separador">
+
+				<!-- VERTICAL SPACE -->
+				<div style="height:16px;"></div>
+
+				<!-- TEXT -->
+				<p class="text_footer">Para visualizar estas unidades interactivas es necesario usar un navegador de última generación que implemente el Canvas de HTML5, como por ejemplo: <a href="http://www.google.com/chrome/" target="_blank">Google Chrome</a>, <a href="https://www.mozilla.org" target="_blank">Mozila Firefox</a> o <a href="https://www.apple.com/safari/" target="_blank">Apple Safari</a></p>
+				<p class="text_footer">Está permitida la copia y distribución de estos materiales siempre y cuando sea sin ánimo de lucro y conservando la referencia a los autores.</p>
+				<p class="text_footer"><a href="http://creativecommons.org/licenses/by-nc-sa/2.5/es/" target="_blank"><img id="image_cc" src="images/index_logo_cc.png" alt="Logotipo Creative Commons"></a>Los contenidos de estas unidades didácticas interactivas están bajo una licencia <a href="http://creativecommons.org/licenses/by-nc-sa/2.5/es/" target="_blank">Creative Commons</a>, si no se indica lo contrario.<br>Las unidades didácticas fueron creadas con <a href="http://arquimedes.matem.unam.mx/Descartes5/creditos/conCCL.html" target="_blank">Descartes</a>, que es un producto de código abierto.</p>
+
+				<!-- VERTICAL SPACE -->
+				<div style="height:60px;"></div>
+
+			</div>
+
+		</div>
+
+	</body>
+
+</html>

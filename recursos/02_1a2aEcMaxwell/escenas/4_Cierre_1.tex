@@ -1,0 +1,99 @@
+\documentclass{article}
+\usepackage[letterpaper,margin=2cm]{geometry}
+\usepackage[spanish]{babel}
+\decimalpoint
+\usepackage[utf8]{inputenc}
+\usepackage{fourier}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage[makeroom]{cancel}
+\usepackage{esvect}
+\usepackage{gensymb}
+\usepackage{color,soul}
+\usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{afterpage}
+\usepackage{lipsum}
+\usepackage[hypcap]{caption}
+\usepackage{subcaption}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage{soulutf8}
+\usepackage{hyperref}
+\usepackage{avant}
+\usepackage{tikz}
+\usepackage{eso-pic}
+\usepackage{multicol}
+\usepackage{etoolbox,fancyhdr}
+\usepackage[explicit]{titlesec} %Para modificar los encabezados
+\usepackage{tikz}
+\usetikzlibrary{arrows,shapes,positioning}
+\usepackage{physics}
+
+\begin{document}
+
+%\author{Author's Name}
+\title{La 1a y 2a ecuaciones de Maxwell}
+\date{}
+\maketitle
+
+%\begin{abstract}
+%The abstract text goes here.
+%\end{abstract}
+
+%\section{Introduction}
+%Here is the text of your introduction.
+
+\section{La 1a ecuación de Maxwell}
+
+Sabiendo que, para una esfera en cuyo centro se encuentra una carga eléctrica, un vector de campo eléctrico siempre saldrá perpendicular a la superficie de la esfera. La La ley de Coulomb presenta una consecuencia interesante: el producto del área por la intensidad de campo es constante. Esto se debe a que la ley de Coulomb, que dicta que la intensidad de la fuerza (y, por lo tanto, también el campo) eléctrica decrece como el inverso del cuadrado de la distancia, que a su vez implica que la cantidad de campo que sale por cualquier esfera que encierra una carga en su centro siempre será igual.\bigskip
+
+Esto constituye la ley de la divergencia de Gauss. Ella indica que el flujo es el que puede verse como el producto del campo que sale por el área elegida. Más aún, las deformaciones de la superficie no afectan cuánto sale del flujo, dado que siempre ha de salir el mismo flujo por cualquier superficie cerrada.\bigskip
+
+Esta ley de la divergencia proporciona una herramienta muy útil para el cálculo de campos que presentan una simetría particular. El cálculo de un campo no de una carga puntual, sino con una distribución determinada en el espacio, resulta ser laborioso en la mayoría de los casos, siendo necesario abordar dichos problemas con cálculo infinitesimal. No obstante, si el sistema en cuestión presenta una simetría, es posible en la mayoría de los casos escoger la superficie cerrada para poder aplicar la ley de Gauss y así ahorrarse la labor de determinar un campo usando cálculo.\bigskip
+
+Los dos ejemplos presentados en esta unidad constituyen un caso de simetría esférica (una carga distribuida uniformemente sobre una esfera) y planar (una carga distribuida uniformemente sobre un plano). Como se observó, la ley de Gauss permite el cálculo inmediato del campo en un punto determinado del espacio.
+Pero es importante saber la simetría con que se trabaja. En el caso de la esfera cargada, si la carga no está distribuida uniformemente (hay más carga en, digamos, un polo de la esfera que en el otro), la ley de Gauss no puede usarse ya que el sistema deja de ser simétrico. Lo mismo ocurre para un plano con carga distribuida no uniformemente. En ese caso, el uso del cilindro no ahorraría trabajo, sino que lo complicaría.\bigskip
+
+En fin, la ley de Gauss, que es una forma alterna de expresar la ley de Coulomb, nos dice que el flujo del campo eléctrico a través de una superficie cerrada que guarda en su interior una carga, es proporcional a la carga encerrada en su interior. Ella constituye la ley de Gauss para el fenómeno eléctrico, y también es conocida como la primera ecuación de Maxwell.\bigskip
+
+La formulación matemática de la primera ecuación de Maxwell es como sigue:\bigskip
+
+\begin{equation}
+\begin{aligned}
+\nabla\cdot{\vv{E}}=\rho\\
+\epsilon_0\Phi_E=q\\
+\epsilon_0\oint\vv{E}\cdot{d}\vv{A}=q
+\end{aligned}
+\end{equation}\bigskip
+
+La primera ecuación representa la forma diferencial de la ley de Gauss. Recuerda el concepto de divergencia que revisaste en la unidad sobre \emph{Campos vectoriales}. La divergencia devuelve el valor de cuánto campo entra o sale en una superficie cerrada. En dicha unidad usaste como instrumento de medición una caja cerrada. En la presente unidad se usaron una esfera y un cilindro para ello. Finalmente, lo importante es notar que la divergencia calcula el campo que entra o sale por una superficie cerrada. La ley de Gauss se entiende entonces como que el campo que sale por una superficie que contiene una carga es proporcional a la carga en el interior. Si no contiene carga en el interior, la entrada o salida neta de campo por la superficie será cero. Aunque la divergencia involucra un cálculo en un elemento de volumen infinitesimal, el concepto también se puede entender para un volumen no infinitesimal que guarda una cierta carga en su interior.\bigskip
+
+La segunda y tercera ecuación en (1) son realmente la misma ecuación, y constituyen la forma integral de la ley de Gauss. La segunda indica que el flujo del campo $\vv{E}$ (denotado como $\Phi_E$) por una superficie cerrada es proporcional a la carga encerrada dentro de dicha superficie. La tercera representa dicho flujo como $\oint\vv{E}\cdot{d}\vv{A}$. Nota que el flujo es la integral sobre la superficie cerrada (de ahí el símbolo $\oint$) de la componente del campo que es paralela al vector perpendicular al elemento de superficie en la integral (el tomar el producto punto del vector $\vv{E}$ del campo con $d\vv{A}$, que es el vector perpendicular al infinitésimo de área considerada, es lo que asegura que se trata del flujo). Es decir, sólo la componente del campo que efectivamente \emph{sale} de la superficie en cada elemento de la misma.\bigskip
+
+\section{La 2a ecuación de Maxwell}
+
+Debido a que el magnetismo también es una fuerza que disminuye como el cuadrado de la distancia de la fuente magnética, también se puede aplicar la ley de Gauss a este fenómeno. En él, a diferencia del caso eléctrico, las líneas de campo, cuando van, siempre regresan. Ello se debe a que no se puede tener un imán compuesto de un solo polo. Donde hay un polo norte, al lado también habrá uno sur. Así pues, las líneas de campo que pudieran llegar a salir de una superficie cerrada, al regresar al imán cruzarán la superficie en sentido opuesto. Esto genera una cancelación del flujo magnético (la cantidad de campo que atraviesa una superficie cerrada). De tal forma que la ley de Gauss para el fenómeno magnético (también conocida como la segunda ecuación de Maxwell) nos dice que el flujo de campo magnético a través de una superficie cerrada siempre será cero, independiente de si guarda o no un magneto en su interior.\bigskip
+
+La formulación matemática de la segunda ecuación de Maxwell es como sigue:\bigskip
+
+\begin{equation}
+\begin{aligned}
+\nabla\cdot{B}=0\\
+\Phi_B=0\\
+\oint\vv{B}\cdot{d}\vv{A}=0
+\end{aligned}
+\end{equation}\bigskip
+
+La primera ecuación en (2) es la forma diferencial de la segunda ecuación de Maxwell. Es muy similar a la formulación de la primera ley de Maxwell. Sólo que ahora se trata la divergencia del flujo magnético (no el eléctrico), y ésta está igualada a cero. Ello se debe a que, independiente de la superficie cerrada que se considere, o de dónde se encuentra la misma respecto al magneto, las líneas de campo siempre se cierran. Así, lo que entra en la superficie por fuerza tendrá que salir, y la entrada/salida neta de campo siempre será cero.\bigskip
+
+La segunda y tercera ecuaciones en (2) corresponden a la forma integral de la segunda ecuación de Maxwell. En realidad, son dos formas de escribir la misma ecuación. La segunda ecuación nos dice que el flujo del campo magnético $\Phi_B$ (cuánto campo efectivamente \emph{sale} de la superficie cerrada) es cero. La tercera ecuación representa dicho flujo como la integral sobre la superficie cerrada del producto punto del campo magnético $\vv{B}$ con el elemento de área $d\vv{A}$. Nuevamente, el producto punto asegura que se trata del flujo magnético (el campo que cruza perpendicularmente al área).\bigskip
+
+Más aún, aunque se pueden producir campos magnéticos con corrientes eléctricas, si se identifica un polo (sea norte o sur) en el campo, su opuesto siempre estará también presente, lo que implica que dicha propiedad de que el flujo del campo por la superficie siempre es cero es válido también para estos casos.\bigskip
+
+Cuando Maxwell analizó estos fenómenos para componer las ecuaciones que describen el electromagnetismo, notó que siempre hay una simetría entre ellas. De hecho, la corrección que él hizo a la ley de Ampère se conoce como la cuarta ecuación de Maxwell, y fue inspirada por un argumento de simetría con la ley de Faraday (conocida también como la tercera ecuación de Maxwell).\bigskip
+
+Si se esperara una simetría entre la primera y segunda ecuaciones de Maxwell, ello implicaría que sería posible que hubieran polos independientes para el caso de los magnetos (podría tenerse un polo positivo sin su negativo o viceversa). Gracias a este argumento de simetría entre otros, Paul Dirac predijo la existencia del monopolo magnético (precisamente un polo que puede existir sin su contraparte). La búsqueda de dicho monopolo ha sido la ambición de muchos físicos en la actualidad, y no es sino hasta nuestros días que algunos experimentos parecen ser candidatos para demostrar que dicho monopolo sí puede existir.
+
+\end{document}

@@ -1,0 +1,25 @@
+{
+  "nivel": [
+    "Bachillerato",
+	"Licenciatura"
+  ], 
+  "area": [
+    "Matemáticas", 
+    "Física",
+	"Cálculo vectorial",
+	"Campos vectoriales",
+	"Rotacional",
+	"Vectores",
+	"Ley de Ampère",
+	"4a ley de Maxwell",
+	"Electromagnetismo",
+	"Ley de Biot-Savart",
+	"Capacitor",
+	"Condensador",
+	"Ondas electromagnéticas"
+  ], 
+  "titulo": "La 4a Ley de Maxwell", 
+  "descripcion": "Unidad introductoria a la cuarta ecuación del electromagnetismo de Maxwell. Incluye un video motivacional sobre el problema que Maxwell se dispuso a resolver y con el que encontró la corrección a la ecuación de Ampère. Se presenta luego la ley de Biot-Savart y la ley de Ampère mediante la integración para constituir un alambre completo. Se muestra posteriormente la situación para la cual la ley de Ampère resulta incompleta (el caso del capacitor). Finalmente se muestra la corrección que Maxwell hizo a dicha ley para obtener su cuarta ecuación.",
+  "resena": "Introducción a la cuarta ley de Maxwell.",
+  "id": "04_4aEcMaxwell"
+}

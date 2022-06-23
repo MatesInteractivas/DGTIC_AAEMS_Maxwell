@@ -1,0 +1,16 @@
+{
+  "nivel": [
+    "Bachillerato",
+    "Licenciatura"
+  ],
+  "titulo": "Cálculo vectorial y las Ecuaciones de Maxwell",
+  "abreviacion": "DGTIC - Maxwell",
+  "descripcion": "Cuatro unidades desarrolladas originalmente para la DGTIC para el área de física del proyecto Apoyo Académico para la Educación Media Superior. Las unidades abordan los campos vectoriales, el calculo vectorial y su aplicación en las ecuaciones del electromagnetismo de Maxwell. Las versiones originales se encuentran en objetos.unam.mx, dentro del acervo de unidades del área de Física. A las presentes unidades se les agregó adicionalmente material con mayor profundidad, incluyendo más información sobre la divergencia. En este sentido, el nivel al que están orientadas es introductorio para licenciatura, pero tienen el potencial de ser usadas como avanzadas tambien a nivel bachillerato. Creadas dentro de los estándares de HTML-5, pueden ser visualizados en dispositivos móviles, además de en computadoras con cualquier sistema operativo.",
+  "resena": "Cuatro unidades sobre campos vectoriales y su aplicación en las ecuaciones de Maxwell",
+  "recursos_valores_omision": {
+    "tamano": {
+      "ancho":980,
+      "alto":670
+    }
+  }
+}

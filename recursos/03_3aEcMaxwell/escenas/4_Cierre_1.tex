@@ -1,0 +1,87 @@
+\documentclass{article}
+\usepackage[letterpaper,margin=2cm]{geometry}
+\usepackage[spanish]{babel}
+\decimalpoint
+\usepackage[utf8]{inputenc}
+\usepackage{fourier}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage[makeroom]{cancel}
+\usepackage{esvect}
+\usepackage{gensymb}
+\usepackage{color,soul}
+\usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{afterpage}
+\usepackage{lipsum}
+\usepackage[hypcap]{caption}
+\usepackage{subcaption}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage{soulutf8}
+\usepackage{hyperref}
+\usepackage{avant}
+\usepackage{tikz}
+\usepackage{eso-pic}
+\usepackage{multicol}
+\usepackage{etoolbox,fancyhdr}
+\usepackage[explicit]{titlesec} %Para modificar los encabezados
+\usepackage{tikz}
+\usetikzlibrary{arrows,shapes,positioning}
+\usepackage{physics}
+
+\begin{document}
+
+%\author{Author's Name}
+\title{La 3a ecuación de Maxwell}
+\date{}
+\maketitle
+
+%\begin{abstract}
+%The abstract text goes here.
+%\end{abstract}
+
+%\section{Introduction}
+%Here is the text of your introduction.
+
+Como se mencionó a lo largo de la unidad, Oersted se percató de que había una relación entre el campo magnético y una corriente eléctrica. Ello motivó a Faraday a buscar generar una corriente a partir de un campo eléctrico.\bigskip
+
+Sin embargo, resultó ser que no es el campo magnético como tal el que genera una corriente, sino \emph{el cambio del campo respecto al tiempo en que se logra}. Mientras más intenso sea dicho cambio (un cambio intenso se entiendo como que haya un cambio muy grande en la magnitud del campo en un tiempo relativamente pequeño), mayor será la intensidad de la corriente. Antes de pasar a las fórmulas, cabe notar que el flujo magnético, representado por $\Phi_B$, es una medida que nos indica cuánto campo pasa a través de la espira (o la superficie flanqueada por el cable, independiente de su forma). El cambio instantáneo del campo respecto al tiempo se representa, en notación de cálculo, como $\frac{d\Phi_B}{dt}$. Éste cambio respecto al tiempo genera una fuerza electromotriz (o \emph{fem}), también conocida como potencial o voltaje. Finalmente, ésta es la que, al ser aplicada al cable, genera la corriente en el mismo. Así pues, Faraday llegó a la siguiente fórmula:\bigskip
+
+\begin{equation}
+|fem|=\Bigg|\frac{d\Phi_B}{dt}\Bigg|
+\end{equation}\bigskip
+
+Es decir, Faraday hizo la relación entre ambas \textbf{magnitudes}, sin importar su signo. No obstante, fue Lenz quien estableció que, para no sólo manejar magnitudes (y así poder quitar el símbolo del valor absoluto de ambos lados de la igualdad), había que agregar un signo menos. Con ello, obtenemos una fórmula que nos brinda aún más información, a saber:\bigskip
+
+\begin{equation}
+fem=-\frac{d\Phi_B}{dt}
+\end{equation}\bigskip
+
+Más adelante, el físico escocés James Clerk Maxwell conjuntó cuatro ecuaciones: la ley de Gauss de las cargas, la ley de Gauss de los imanes, la ley de Faraday y la ley de Ampère (junto con una corrección que él le agregó). Estas cuatro ecuaciones se conocen como las \emph{Ecuaciones de Maxwell} del electromagnetismo. Dichas ecuaciones permiten asociar los fenómenos relacionados con la electricidad y aquellos con el magnetismo. Además, sus ecuaciones poseen una simetría muy hermosa.\bigskip
+
+Una de las simetrías que Maxwell notó es que, para una corriente por un cable, se genera un campo magnético que \emph{\textbf{gira}} alrededor del eje del cable. El campo magnético es, valga la redundancia, un campo vectorial. De igual forma, en la ley de Faraday, para un campo que atraviesa una superficie, alrededor de él se forma un campo eléctrico que gira y cuya intensidad y dirección dependen de \textbf{cómo cambia el campo magnético respecto al tiempo}. Como viste en la unidad de \emph{Campos vectoriales}, el rotacional de un campo vectorial (que nos dice qué tanto gira alrededor de un disco que se considera cada vez más y más pequeño), como el eléctrico, se representa como $\nabla\times\vv{E}$.\bigskip
+
+Así pues, la 3a ecuación de Maxwell queda expresada como:\bigskip
+
+\begin{equation}
+\begin{aligned}
+\nabla\times\vv{E}=-\frac{\partial{\vv{B}}}{\partial{t}}\\
+\oint\vv{E}\cdot{d}\vv{s}=-\frac{d\Phi_B}{dt}
+\end{aligned}
+\end{equation}\bigskip
+
+La primera ecuación de (3) corresponde a la forma diferencial de la 3a ecuación de Maxwell. El lado derecho de la igualdad se puede interpretar como el cambio respecto al tiempo del campo magnético. El lado izquierdo nos indica que alrededor de la línea donde cambia el campo magnético, se crea un campo eléctrico cuyo rotacional es igual al negativo del cambio temporal instantáneo del campo magnético (lado derecho de la fórmula). La mejor forma de visualizarlo es considerando el ejemplo del imán de barra que entra en una espira conectada al amperímetro. El cambio del campo magnético es a lo largo del eje de la espira. Al cambiar, se genera un campo eléctrico que gira en la espira (de ahí la relación con el rotacional), y es éste el responsable de que se produzca una corriente en la misma.\bigskip
+
+La segunda ecuación de (3) corresponde a la forma integral de la 3a ecuación de Maxwell. El lado izquierdo de la igualdad representa una integral cerrada del producto punto del campo eléctrico a lo largo de una curva cerrada (con elementos infinitesimales $d\vv{s}$). El producto punto en este caso representa la componente del campo eléctrico sobre el elemento de la curva en la espira cerrada. El lado derecho contiene el negativo del cambio temporal instantáneo del flujo alrededor de la superficie encerrada por la espira.\bigskip
+
+Observa que en (1), (2), y en la forma integral de (3) se usa el flujo magnético $\Phi_B$ en las fórmulas, mientras que en la forma diferencial de (3) se usa simplemente $\vv{B}$ (el campo magnético). Recuerda que ambas son dos cantidades relacionadas a lo mismo. Sólo que el flujo se refiere a qué tanto del campo vectorial $\vv{B}$ pasa a través de una superficie, mientras que $\vv{B}$ es el campo como tal. No obstante, es importante notar que el cambio en una implica un cambio en la otra si la superficie de la espira por la que pasa el campo magnético no cambia.\bigskip
+
+Es importante recordar que el signo negativo en ambas versiones es un resultado de la conservación de la energía. De no tener dicho signo, la energía no se conservaría e incrementaría sin límite, situación que no pasa en la realidad. Dicho signo fue introducido por Lenz precisamente para asegurar que la energía se conservara.\bigskip
+
+¿Y qué utilidad tienen todas estas fórmulas curiosas? Maxwell notó que un cambio en el potencial genera un campo magnético. Al haber sido generado este campo magnético, implica un \emph{cambio en el campo magnético respecto al tiempo}, por lo que se generará otro cambio en el potencial eléctrico. Este tipo de cascada se puede propagar, dando lugar a una onda (conocida como \emph{onda electromagnética}). Maxwell pudo de forma teórica calcular que la velocidad a la que se propaga esta onda es justo la de la luz. Así pues, parecía que la luz sólo era una onda electromagnética de ciertas frecuencias. Hertz, unos años después, demostró que efectivamente las ondas de radio también se mueven a la velocidad de la luz. Todo esto fue el principio del radio, radar, etc. y se puede extender hasta el celular, y hasta el WiFi que seguramente estás utilizando ahora.\bigskip
+
+En la unidad sobre la 4a ecuación de Maxwell se hace el cierre de la teoría que formuló Maxwell. Ella relaciona el cambio en el campo eléctrico y el campo magnético. Notarás varios paralelos con la presente unidad, con la salvedad de una pequeña diferencia.
+
+\end{document}

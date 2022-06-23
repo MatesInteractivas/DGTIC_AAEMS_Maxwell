@@ -1,0 +1,21 @@
+{
+  "nivel": [
+    "Bachillerato",
+	"Licenciatura"
+  ], 
+  "area": [
+    "Matemáticas", 
+    "Física",
+	"Cálculo vectorial",
+	"Campos vectoriales",
+	"Vectores",
+	"Ley de Gauss",
+	"1a ley de Maxwell",
+	"2a ley de Maxwell",
+	"Divergencia"
+  ], 
+  "titulo": "Campos vectoriales", 
+  "descripcion": "Unidad introductoria a la primera y segunda ecuaciones del electromagnetismo de Maxwell. Inicialmente se presenta el flujo como el cruce de líneas de campo por una cara dada. Posteriormente se consideran superficies cerradas compuestas por caras, y se observa el flujo a través de dichas superficies. De donde se deduce que el flujo eléctrico a través de una superficie cerrada siempre es igual (y proporcional a la carga que encierra), independiente de la forma de la superficie o su posición (ley de Gauss o 1a ley de Maxwell). Se muestran aplicaciones de la misma para el cálculo de campos eléctricos. Finalmente se hace un ejercicio similar para el caso de los magnetos, de donde se deduce que, como las curvas de campo en un magneto siempre son cerradas, el flujo magnético a través de una superficie cerrada siempre es cero.",
+  "resena": "Introducción a la primera y segunda leyes de Maxwell.",
+  "id": "02_1a2aEcMaxwell"
+}

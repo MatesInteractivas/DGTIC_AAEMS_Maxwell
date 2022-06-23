@@ -1,0 +1,94 @@
+\documentclass{article}
+\usepackage[letterpaper,margin=2cm]{geometry}
+\usepackage[spanish]{babel}
+\decimalpoint
+\usepackage[utf8]{inputenc}
+\usepackage{fourier}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage[makeroom]{cancel}
+\usepackage{esvect}
+\usepackage{gensymb}
+\usepackage{color,soul}
+\usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{afterpage}
+\usepackage{lipsum}
+\usepackage[hypcap]{caption}
+\usepackage{subcaption}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage{soulutf8}
+\usepackage{hyperref}
+\usepackage{avant}
+\usepackage{tikz}
+\usepackage{eso-pic}
+\usepackage{multicol}
+\usepackage{etoolbox,fancyhdr}
+\usepackage[explicit]{titlesec} %Para modificar los encabezados
+\usepackage{tikz}
+\usetikzlibrary{arrows,shapes,positioning}
+\usepackage{physics}
+
+\begin{document}
+
+%\author{Author's Name}
+\title{El rotacional y la divergencia}
+\date{}
+\maketitle
+
+%\begin{abstract}
+%The abstract text goes here.
+%\end{abstract}
+
+%\section{Introduction}
+%Here is the text of your introduction.
+
+\section{El rotacional}
+
+Una de las herramientas más importantes para analizar el comportamiento de campos vectoriales es el \emph{rotacional}. Es una de las herramientas cuyo funcionamiento puede ser fácilmente entendido y, no obstante, suelen eludir a la mayoría de los estudiantes, quienes terminan simplemente memorizando su expresión matemática.\bigskip
+
+Para facilitar el giro de un objeto contra las manecillas del reloj (o bien, un giro positivo pues es como se miden los ángulos positivos) hay 2 formas de hacerlo. Una con fuerzas que jalan verticalmente y otra con fuerzas que jalan horizontalmente. Las fuerzas que actúan sobre el centro del objeto lo podrán desplazar, pero no podrán hacerlo girar debido a que no tendrán un brazo de palanca para hacerlo. Lo que nos deja con fuerzas que actúan fuera del centro, y que pueden ser ejemplificadas por fuerzas que actúan en los extremos del objeto.\bigskip
+
+Considerando las fuerzas verticales solamente, un giro positivo sólo ocurrirá si la fuerza vertical que actúa a la derecha es mayor que la que actúa a la izquierda del objeto. Que es lo mismo que decir que la resta de la primera menos la segunda deberá ser positiva. Éste es el término $\frac{\partial y}{\partial x}$ en la fórmula del rotacional cuando la distancia que se recorre de derecha a izquierda es infinitesimal (que en el ejemplo de la lección, corresponde a un disco tan pequeño como se quiera (infinitesimal también). Esto es, si me muevo a la derecha (o en dirección positiva) sobre el eje \emph{X}, será necesario que aumente (o también se mueva en dirección positiva) la componente vertical (o paralela al eje \emph{Y}) de mi campo.\bigskip
+
+Considerando las fuerzas horizontales solamente, para que éstas generen un giro positivo, la fuerza que actúa arriba debe ser menor que la que actúa abajo. Que es lo mismo que decir que la resta de la de arriba menos la de abajo debe ser negativa. Éste es el término $-\frac{\partial y}{\partial x}$ en la fórmula del rotacional cuando la distancia recorrida de abajo a arriba es infinitesimal (nuevamente, un disco tan pequeño como se quiera). El signo negativo de este término se debe a que, para que haya un giro positivo, el valor de la componente horizontal (o en \emph{x}) al moverse de abajo hacia arriba (al considerar un aumento en la vertical) debe \textbf{disminuir}, en vez de aumentar.\bigskip
+
+Así, el rotacional tiene la forma:\bigskip
+
+\begin{equation}
+\nabla\times{\vv{E}}=\Bigg(\frac{\partial E_z}{\partial y}-\frac{\partial E_y}{\partial z}\Bigg)\hat{i}+\Bigg(\frac{\partial E_x}{\partial z}-\frac{\partial E_z}{\partial x}\Bigg)\hat{j}+\Bigg(\frac{\partial E_y}{\partial x}-\frac{\partial E_x}{\partial y}\Bigg)\hat{k}
+\end{equation}\bigskip
+
+donde el operador nabla está dado por $\nabla=\bigg(\frac{\partial}{\partial x},\frac{\partial}{\partial y},\frac{\partial}{\partial z}\bigg)$. El primer término en (1) nos dice cuánto gira el campo en el punto escogido en un plano paralelo al plano \emph{YZ} y es un vector perpendicular a dicho plano (que por lo mismo es paralelo al eje \emph{X}). El segundo término nos dirá cuánto gira el campo alrededor del punto en un plano paralelo al plano \emph{XZ} (o, lo que es lo mismo, alrededor del eje paralelo al eje \emph{Y}), y el tercero nos dirá cuánto gira alrededor de un punto en un plano paralelo al \emph{XY} (y que por lo mismo es paralelo al eje \emph{Z}). Para ejemplos como los vistos en los interactivos, el campo sólo tiene componentes paralelas al eje \emph{X} y al \emph{Y}. Esto es, son ejemplos bidimensionales en un plano (precisamente un plano paralelo al \emph{XY}). Para este tipo de campos, sólo el último término de la fórmula del rotacional sobrevive, y queda expresado como un vector de dirección $\hat{k}$, o paralelo al eje \emph{Z}. De forma general, para campos vectoriales en 3 dimensiones, el rotacional total podrá ser un vector no necesariamente paralelo a uno de los ejes.\bigskip
+
+Es importante enfatizar que el rotacional es, en realidad, un vector. Como se vio en los ejemplos en los interactivos, resultó perpendicular al plano en que giraba el campo (esto es, tiene dirección). Si el giro era positivo apuntaba en un sentido, y si el giro era negativo, apuntaba en el opuesto (esto es, tiene sentido). Y finalmente, a mayor intensidad del giro, mayor valor del rotacional (esto es, tiene magnitud).\bigskip
+
+Cabe mencionar que la utilidad del rotacional se manifiesta principalmente en dinámica de fluidos y electromagnetismo. En particular, para el último caso aparece en las ecuaciones 3 y 4 de Maxwell que resumen las relaciones entre la electricidad y el magnetismo.\bigskip
+
+\section{La divergencia}
+
+Al igual que el rotacional, la divergencia es una herramienta del cálculo vectorial de gran uso.\bigskip
+
+La divergencia mide la \emph{salida neta de campo} de una curva cerrada. Un valor negativo de la misma indicaría una \emph{entrada} de campo a la superficie. La magnitud de la divergencia nos indica qué tanto campo es el que sale o entra (dependiendo del signo). Es importante notar que la curva no necesariamente ha de ser una caja como en los ejemplos de los interactivos. Bien podría ser una circunferencia. Lo importante es que dicha curva se encuentre cerrada.\bigskip
+
+Como lo que se mide es salida o entrada de campo, nos interesan las componentes del campo que son \emph{perpendiculares} a la superficie. En el caso de la caja, esto es más sencillo de verse. Por ejemplo, la componente que participa en la salida / entrada de campo en la cara derecha de la caja tiene que ser horizontal, al ser dicha cara vertical. Ello implica que interesa medir cuánto cambia dicha componente (la horizontal o \emph{Ex}) respecto a un cambio horizontal también (en el sentido de las \emph{x}). Es por ello que es la derivada de \emph{Ex} respecto de \emph{x} la que contribuye a la salida o entrada del campo. Algo similar ocurre para las componentes verticales.\bigskip
+
+Por otra parte, las componentes que son tangentes a (o bien, \emph{rozan}) las paredes de la caja (como por ejemplo la componente vertical en el lado derecho de la caja) contribuirán tal vez a hacer girar el campo, y por ello aparecen más en la parte del rotacional. No obstante, para el caso de la divergencia no son relevantes.\bigskip
+
+De forma general, la divergencia tiene la forma:\bigskip
+
+\begin{equation}
+\nabla\cdot\vv{E}=\Bigg(\frac{\partial}{\partial x},\frac{\partial}{\partial y},\frac{\partial}{\partial z}\Bigg)\cdot\big(E_x,E_y,E_z\big)=\frac{\partial E_x}{\partial x}+\frac{\partial E_y}{\partial y}+\frac{\partial E_z}{\partial z}
+\end{equation}\bigskip
+
+donde el operador nabla está dado por $\nabla=\bigg(\frac{\partial}{\partial x},\frac{\partial}{\partial y},\frac{\partial}{\partial z}\bigg)$. El primer término nos dirá cuánto campo escapa horizontalmente (a lo largo del eje \emph{X}), el segundo nos dirá cuánto escapa verticalmente (a lo largo del eje \emph{Y}) y el tercero nos dirá cuánto escapa en una tercera dimensión perpendicular al eje \emph{X} y \emph{Y}, o bien a lo largo del eje \emph{Z}. Como en nuestros ejemplos los campos estaban restringidos al plano \emph{XY} (no había una contribución al campo en \emph{z}), el tercer término nunca apareció.\bigskip
+
+El hecho de que la divergencia sea válida para tres dimensiones implica que lo que nosotros llamamos una curva cerrada (la caja o la circunferencia) para el caso bidimensional ahora tendría que ser una superficie cerrada para el caso tridimensional (por ejemplo, un cubo o una esfera).\bigskip
+
+A diferencia del rotacional, que al tener magnitud (que nos informa cuánto rota el campo), dirección (que nos informa sobre que plano es el giro neto del plano) y sentido (que nos dice si gira a favor o en contra de las manecillas del reloj), y que por tanto es un vector, la divergencia carece de dirección y sentido. Esto es, es un escalar cuya magnitud nos indica solamente la intensidad con que escapa o entra el campo y el signo nos dice si entra o sale.\bigskip
+
+La utilidad de la divergencia se manifiesta en el teorema de la divergencia de Gauss. Es precisamente éste teorema el que nos indica que la divergencia de un campo gravitatorio es cero si la superficie cerrada usada para medir la divergencia no tiene masa alguna en su interior. De tener masa en su interior, la divergencia será proporcional a la masa en la superficie. Debido a la estrecha relación entre las fuerzas gravitatorias y las fuerzas eléctricas, éste teorema también se aplica a las cargas eléctricas, y se pone en evidencia como la ley de Gauss de las cargas eléctricas. Ella corresponde a la primera ecuación de Maxwell, la cual efectivamente lleva relacionada una divergencia en su fórmula.
+
+\end{document}

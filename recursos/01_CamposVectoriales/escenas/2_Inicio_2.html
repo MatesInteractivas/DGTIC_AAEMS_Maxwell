@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<head>
+<title>Inicio</title>	
+	<script type='text/javascript' src='../lib/descartes-min.js'></script>
+</head>
+<body BGCOLOR="c0c0c0" leftmargin="0" topmargin="0">
+<ajs name="Descartes" width=970 height=550 code="Descartes">
+   <param name="tamaño" value="970x550">
+   <param name="decimal_symbol" value=".">
+   <param name="antialias" value="sí">
+   <param name="deshacer" value="no">
+   <param name="nombre" value="Descartes">
+   <param name="Versión" value="5.3.05, 2014-03-12">
+   <param name="Idioma" value="español">
+   <param name="Botones" value="créditos=no config=no inicio=no limpiar=no">
+   <param name="E_01" value="tipo='R2' id='E1' imagen='images/fondo_suave.jpg' despl_imagen='arr-izq' fondo='c0d0d8' red='no' red10='no' ejes='no' texto='no'">
+   <param name="E_02" value="tipo='R2' id='E2' x='52%' y='28%' ancho='46%' alto='70%' dibujar-si='!info' fijo='sí' despl_imagen='arr-izq' fondo='aaf8fa' red='b8c4c8' red10='889498' ejes='405860' texto='no'">
+   <param name="E_03" value="tipo='R2' id='E3' x='2%' y='20%' ancho='48%' alto='78%' dibujar-si='!info' fijo='sí' despl_imagen='arr-izq' red='no' red10='no' ejes='no' texto='no'">
+   <param name="E_04" value="tipo='R2' id='ExEy' x='52%' y='20%' ancho='46%' alto='8%' dibujar-si='!info' despl_imagen='arr-izq' red='b8c4c8' red10='889498' ejes='405860' texto='405860'">
+   <param name="E_05" value="tipo='R2' id='Suggest' x='(970-490)/2' y='70' ancho='490' alto='470' dibujar-si='shwSugg==1' fijo='sí' imagen='images/retro_490x470.png' despl_imagen='arr-izq' red='no' red10='no' ejes='no' texto='no'">
+   <param name="E_06" value="tipo='R2' id='INFO' x='(970-790)/2' y='65' ancho='790' alto='470' dibujar-si='info' fijo='sí' imagen='images/retro_790x470.png' despl_imagen='arr-izq' red='no' red10='no' ejes='no' texto='no'">
+   <param name="C_01" value="id='goTo0' tipo='numérico' interfaz='botón' región='interior' espacio='E1' expresión='(15,22,32,30)' fijo='sí' visible='sí' fuente puntos='14' imagen='images/retroceder.png' acción='calcular' parámetro='parent.set(&squot;scene&squot;,1);\nparent.update()'">
+   <param name="C_02" value="id='goTo2' tipo='numérico' interfaz='botón' región='interior' espacio='E1' expresión='(E1._w-47,22,32,30)' fijo='sí' visible='sí' fuente puntos='14' imagen='images/avanzar.png' acción='calcular' parámetro='parent.set(&squot;scene&squot;,3);\nparent.update()' dibujar-si='0'">
+   <param name="C_03" value="id='cerrarInfo' tipo='numérico' interfaz='botón' región='interior' espacio='INFO' expresión='(INFO._w-29,8,21,21)' fijo='sí' visible='sí' imagen='images/cerrar.png' acción='calcular' parámetro='info=0'">
+   <param name="C_04" value="id='textX' tipo='numérico' interfaz='campo de texto' solo_texto='sí' región='interior' espacio='E3' nombre='_nada_' expresión='(80,185,280,50)' valor='&squot;0.5*x&squot;' fijo='sí' visible='sí' acción='calcular' parámetro='VctFld()' activo-si='!shwSugg'">
+   <param name="C_05" value="id='textY' tipo='numérico' interfaz='campo de texto' solo_texto='sí' región='interior' espacio='E3' nombre='_nada_' expresión='(80,240,280,50)' valor='&squot;0.5&squot;' fijo='sí' visible='sí' acción='calcular' parámetro='VctFld()' activo-si='!shwSugg'">
+   <param name="C_06" value="id='scrlInfoInv' tipo='numérico' región='interior' espacio='INFO' nombre='_nada_' expresión='(INFO._w-40,INFO._h-65,35,60)' valor='1' incr='1' min='0' max='1' decimales='0' fijo='sí' visible='no' acción='calcular' parámetro='scrlInfo=1-scrlInfoInv'">
+   <param name="C_07" value="id='Sugg' tipo='numérico' interfaz='botón' región='interior' espacio='E1' nombre='Más información' expresión='((E1._w-210)/2,80,210,30)' fijo='sí' visible='sí' color='blanco' color-int='fff0f8ff' negrita='sí' fuente puntos='21' imagen='images/btn210.png' acción='calcular' parámetro='shwSugg=1' activo-si='!shwSugg'">
+   <param name="C_08" value="id='g9' tipo='gráfico' espacio='E2' color-int='ccb522' activo-si='!shwSugg'">
+   <param name="C_09" value="id='g9.x' tipo='numérico' región='exterior' espacio='E1' nombre='g9.x' valor='0.2' min='-4' max='4' discreto='sí' decimales='1' fijo='sí' visible='sí'">
+   <param name="C_10" value="id='g9.y' tipo='numérico' región='exterior' espacio='E1' nombre='g9.x' valor='0.2' min='-4' max='4' discreto='sí' decimales='1' fijo='sí' visible='sí'">
+   <param name="C_11" value="id='clsSugg' tipo='numérico' interfaz='botón' región='interior' espacio='Suggest' nombre='_nada_' expresión='(Suggest._w-30,10,21,20)' fijo='sí' visible='sí' imagen='images/cerrar.png' acción='calcular' parámetro='shwSugg=0'">
+   <param name="A_01" value="id='M1' vector='sí' matriz='sí' evaluar='una-sola-vez' columnas='500' filas='4' expresión=';'">
+   <param name="A_02" value="id='funcx()' expresión='_Eval_(textX)'">
+   <param name="A_03" value="id='funcy()' expresión='_Eval_(textY)'">
+   <param name="A_04" value="id='VctFld()' algoritmo='sí' algoritmo='sí' inicio='i=0;x=-4;y=-4;delta=0.5;ifin=81/(delta^2)' hacer='M1[i,0]=x;M1[i,1]=y;M1[i,2]=M1[i,0]+funcx();M1[i,3]=M1[i,1]+funcy();i=i+1;x=(mdl(i,1+8/delta)!=0)?x+delta:-4;y=(mdl(i,1+8/delta)==0)?y+delta:y' mientras='i<ifin'">
+   <param name="A_05" value="id='mdl(a,b)' expresión='a-ent(a/b)*b'">
+   <param name="A_06" value="id='INICIO' algoritmo='sí' evaluar='una-sola-vez' inicio='info=1' hacer='titulo=&squot;El campo vectorial&squot;;VctFld();'">
+   <param name="A_07" value="id='CALCULOS' algoritmo='sí' evaluar='siempre' hacer='x=g9.x;y=g9.y;Ex=funcx();Ey=funcy();'">
+   <param name="G_01" value="espacio='E1' tipo='polígono' fondo='sí' color='5566aa' coord_abs='sí' expresión='(0,0)(E1._w-1,0)(E1._w-1,E1._h-1)(0,E1._h-1)(0,0)' relleno='f05566aa'">
+   <param name="G_02" value="espacio='E1' tipo='texto' expresión='[(E1._w-_AnchoDeCadena_(titulo,&squot;SansSerif&squot;,&squot;PLAIN&squot;,&squot;30&squot;))/2,20]' texto='[titulo]' fuente='SansSerif,PLAIN,30' fijo='sí'">
+   <param name="G_03" value="espacio='INFO' tipo='texto' color='blanco' expresión='[10,5]' texto='Explicación' fuente='SansSerif,PLAIN,24' fijo='sí'">
+   <param name="G_04" value="espacio='INFO' tipo='texto' color='negro' dibujar-si='scrlInfo==0' expresión='[10,50]' texto='Es momento de que construyas tus propios campos vectoriales.\n' fuente='SansSerif,PLAIN,21' fijo='sí'">
+   <param name="G_05" value="espacio='INFO' tipo='texto' color='negro' dibujar-si='scrlInfo==0' expresión='[10,100]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Times New Roman;\f3\fcharset0 Times New Roman;}\f1\fs42 Un campo vectorial se construye como un par de reglas de\par correspondencia. Para cada punto (\f2\fs42\i x\f1\fs42\i0 ,\f2\fs42\i y\f1\fs42\i0 ) en el plano hay un vector con\par coordenadas (\f3\fs46\i{\*\mjaformula E{\subix x}}\f1\fs42\i0 ,\f3\fs46\i{\*\mjaformula E{\subix y}}\f1\fs42\i0 ), y \f3\fs46\i{\*\mjaformula E{\subix x}}\f1\fs42\i0  es una funci\u243 n que depende de \f2\fs42\i x\f1\fs42\i0  y de \f2\fs42\i y\f1\fs42\i0 ,\f2\fs42\i\par \f1\fs42\i0 y es la componente horizontal del vector. Similarmente ocurre para Ey.\f2\fs42\i}' fuente='SansSerif,PLAIN,21' fijo='sí'">
+   <param name="G_06" value="espacio='E2' tipo='flecha' expresión='(M1[s,0],M1[s,1])(M1[s,2],M1[s,3])' familia='s' s.intervalo='[0,ifin]' s.pasos='ifin' fijo='sí' tamaño='1' ancho='1' punta='2'">
+   <param name="G_07" value="espacio='INFO' tipo='texto' color='negro' dibujar-si='scrlInfo==0' expresión='[10,250]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Times New Roman;}\f1\fs42 Por ejemplo, \f2\fs46\i{\*\mjaformula E{\subix x}=0.5*x}\f1\fs42\i0  y \f2\fs46\i{\*\mjaformula E{\subix y}=0.5}\f1\fs42\i0  ser\u237 a un campo en el que los\par vectores crecen horizontalmente (la componente \f2\fs46\i{\*\mjaformula E{\subix x}}\f1\fs42\i0 ) al alejarse a la\par derecha del origen, al igual que a la izquierda. Adem\u225 s, siempre tienen\par una componente vertical (\f2\fs46\i{\*\mjaformula E{\subix y}}\f1\fs42\i0 ) que no cambia y es siempre 0.5.}' fuente='SansSerif,PLAIN,21' fijo='sí'">
+   <param name="G_08" value="espacio='INFO' tipo='texto' color='negro' dibujar-si='scrlInfo==1' expresión='[10,50]' texto='Se te presentarán dos campos de texto (Ex y Ey) donde podrás\nintroducir tus propias reglas de correspondencia.' fuente='SansSerif,PLAIN,21' fijo='sí'">
+   <param name="G_09" value="espacio='INFO' tipo='texto' color='negro' dibujar-si='scrlInfo==1' expresión='[10,130]' texto='Prueba distintas reglas. Intenta reproducir o hacer unas similares a las\nque viste en la página anterior a manera de ejemplo.' fuente='SansSerif,PLAIN,21' fijo='sí'">
+   <param name="G_10" value="espacio='E3' tipo='texto' expresión='[20,20]' fijo='sí'">
+   <param name="G_11" value="espacio='E3' tipo='polígono' coord_abs='sí' expresión='(0,0)(E3._w-1,0)(E3._w-1,E3._h-1)(0,E3._h-1)(0,0)' relleno='ffff80' ancho='2'">
+   <param name="G_12" value="espacio='E3' tipo='texto' expresión='[20,20]' texto='Introduce tus reglas de\ncorrespondencia.' fuente='SansSerif,PLAIN,21' fijo='sí'">
+   <param name="G_13" value="espacio='E3' tipo='texto' expresión='[20,100]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Times New Roman;}\f1\fs42 Recuerda que \f2\fs46\i{\*\mjaformula E{\subix x}}\f1\fs42\i0  ser\u225  la compo-\par nente horizontal y \f2\fs46\i{\*\mjaformula E{\subix y}}\f1\fs42\i0  la vertical.}' fuente='SansSerif,PLAIN,21' fijo='sí'">
+   <param name="G_14" value="espacio='E3' tipo='texto' expresión='[20,195]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Times New Roman;\f2\fcharset0 Arial;}\f1\fs46\i{\*\mjaformula E{\subix x}=}\f2\fs42\i0}' fuente='Serif,ITALIC,23' fijo='sí'">
+   <param name="G_15" value="espacio='E2' tipo='flecha' expresión='(g9.x,g9.y)(g9.x+Ex,g9.y+Ey)' fijo='sí' ancho='2' ancho='2' punta='3' flecha='b5bb25'">
+   <param name="G_16" value="espacio='Suggest' tipo='texto' color='blanco' expresión='[10,5]' texto='Información' fuente='SansSerif,PLAIN,21' fijo='sí'">
+   <param name="G_17" value="espacio='Suggest' tipo='texto' expresión='[20,50]' texto='Nuevamente puedes notar que el campo\nvectorial está definido en todos puntos\ndel plano, aunque sólo se pinten los\nvectores en algunos puntos.' fuente='SansSerif,PLAIN,20' fijo='sí'">
+   <param name="G_18" value="espacio='E2' tipo='polígono' coord_abs='sí' expresión='(0,0)(E2._w-2,0)(E2._w-2,E2._h-2)(0,E2._h-2)(0,0)' ancho='2'">
+   <param name="G_19" value="espacio='INFO' tipo='texto' color='negro' dibujar-si='scrlInfo==1' expresión='[10,215]' texto='Recuerda utilizar reglas de correspondencia válidas (esto es, evitar\nraíces con argumentos negativos, divisiones por cero, etc.). De\nlo contrario, el campo que obtengas no tendrá sentido.' fuente='SansSerif,PLAIN,21' fijo='sí'">
+   <param name="G_20" value="espacio='E1' tipo='texto' expresión='[20,20]' fijo='sí'">
+   <param name="G_21" value="espacio='E3' tipo='texto' expresión='[20,250]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Times New Roman;\f2\fcharset0 Arial;}\f1\fs46\i{\*\mjaformula E{\subix y}=}\f2\fs42\i0}' fuente='Serif,ITALIC,23' fijo='sí'">
+   <param name="G_22" value="espacio='E3' tipo='texto' expresión='[20,310]' texto='Coloca el punto amarillo donde gustes\nen el campo para que observes las\ncomponentes de tu vector ahí.' fuente='SansSerif,PLAIN,20' fijo='sí'">
+   <param name="G_23" value="espacio='ExEy' tipo='polígono' coord_abs='sí' expresión='(0,0)(ExEy._w-1,0)(ExEy._w-1,ExEy._h-1)(0,ExEy._h-1)(0,0)' relleno='ffff80' ancho='2'">
+   <param name="G_24" value="espacio='ExEy' tipo='texto' expresión='[100,5]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Times New Roman;}\f1\fs40 (\f2\fs44\i{\*\mjaformula E{\subix x}}\f1\fs40\i0 ,\f2\fs44\i{\*\mjaformula E{\subix y}}\f1\fs40\i0 ) = (\f2\fs44\i{\*\mjaformula{\expr Ex\decimals 2\fixed1}}\f1\fs40\i0 ,\f2\fs44\i{\*\mjaformula{\expr Ey\decimals 2\fixed1}}\f1\fs40\i0 )}' fuente='SansSerif,PLAIN,20' fijo='sí'">
+   <param name="G_25" value="espacio='Suggest' tipo='texto' expresión='[20,190]' texto='Observa que si mueves el punto amarillo\nen puntos donde no hay flechas rojas,\nde cualquier forma la regla de\ncorrespondencia sigue siendo válida y el\nvector amarillo se pinta.' fuente='SansSerif,PLAIN,20' fijo='sí'">
+   <param name="G_26" value="espacio='INFO' tipo='polígono' fondo='sí' color='5566aa' coord_abs='sí' expresión='(0,0)(INFO._w-1,0)(INFO._w-1,INFO._h-1)(0,INFO._h-1)(0,0)' relleno='f85566aa'">
+   <param name="G_27" value="espacio='Suggest' tipo='texto' expresión='[20,360]' texto='Cuando hayas probado varios campos,\ncontinúa a la siguiente parte de la unidad.' fuente='SansSerif,PLAIN,20' fijo='sí'">
+</ajs>
+
+</body>
+</html>
